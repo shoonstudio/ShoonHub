@@ -1,1 +1,94 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+body{
+background:linear-gradient(135deg,#050505,#0f0f0f,#001b10);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(0,255,136,.08),transparent 30%),
+radial-gradient(circle at 80% 80%,rgba(0,255,136,.08),transparent 30%);
+z-index:-1;
+}
+
+.container{
+width:360px;
+text-align:center;
+padding:30px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+backdrop-filter:blur(15px);
+box-shadow:0 0 30px rgba(0,255,136,.15);
+}
+
+.profile{
+width:120px;
+height:120px;
+border-radius:50%;
+border:4px solid #00ff88;
+box-shadow:0 0 25px #00ff88;
+margin-bottom:20px;
+object-fit:cover;
+}
+
+h1{
+color:#00ff88;
+font-size:34px;
+text-shadow:0 0 15px #00ff88;
+margin-bottom:10px;
+}
+
+.bio{
+color:#ccc;
+margin-bottom:25px;
+font-size:15px;
+}
+
+.card{
+display:block;
+margin:15px 0;
+padding:18px;
+background:#171717;
+border-radius:15px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+transition:.3s;
+border:1px solid rgba(0,255,136,.2);
+}
+
+.card:hover{
+background:#00ff88;
+color:#000;
+transform:translateY(-6px) scale(1.04);
+box-shadow:0 0 25px #00ff88;
+}
+
+.footer{
+margin-top:25px;
+color:#bbb;
+font-size:14px;
+}
