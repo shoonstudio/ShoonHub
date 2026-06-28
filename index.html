@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Shoon Hub V3 | Premium Gaming Universe</title>
+  <meta name="description" content="Shoon Hub V3 - Premium futuristic gaming community website with neon cyber UI." />
+  <meta name="keywords" content="gaming, shoohub, cyber, neon, gaming hub, esports" />
+  <meta name="author" content="Shoon Hub Team" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progressBar"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-box">
+      <div class="glow-ring"></div>
+      <h1>Shoon Hub V3</h1>
+      <p>Loading Cyber World...</p>
+    </div>
+  </div>
+
+  <!-- Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">SHOON <span>HUB V3</span></div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#social">Social</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="musicToggle">🎵</button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="glow-text">WELCOME TO SHOON HUB V3</h1>
+      <p>The Ultimate Futuristic Gaming Universe</p>
+
+      <div class="hero-buttons">
+        <button class="btn primary">Join Now</button>
+        <button class="btn secondary">Explore</button>
+      </div>
+    </div>
+
+    <div class="hero-glow"></div>
+  </section><!-- Features Section -->
+  <section id="features" class="section">
+    <h2 class="section-title fade-up">Features</h2>
+
+    <div class="grid">
+      <div class="card fade-up">
+        <h3>⚡ Ultra Performance</h3>
+        <p>Lightning fast gaming experience with optimized cyber UI.</p>
+      </div>
+
+      <div class="card fade-up">
+        <h3>🎮 Gaming Community</h3>
+        <p>Connect with pro gamers and build your squad.</p>
+      </div>
+
+      <div class="card fade-up">
+        <h3>🌐 Global Access</h3>
+        <p>Join from anywhere in the world with smooth access.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="section dark">
+    <h2 class="section-title fade-up">Community</h2>
+    <p class="fade-up center-text">
+      Join our Discord, WhatsApp & TikTok gaming family and stay updated with events.
+    </p>
+
+    <div class="social-buttons fade-up">
+      <button class="btn discord">Discord</button>
+      <button class="btn whatsapp">WhatsApp</button>
+      <button class="btn tiktok">TikTok</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2 class="section-title fade-up">About Shoon Hub</h2>
+    <p class="fade-up center-text">
+      Shoon Hub V3 is a futuristic gaming platform designed for next-gen gamers.
+      Built with cyber aesthetics, neon glow UI, and immersive experience.
+    </p>
+  </section>
+
+  <!-- Social Section -->
+  <section id="social" class="section dark">
+    <h2 class="section-title fade-up">Social Links</h2>
+
+    <div class="grid">
+      <div class="card fade-up">Discord Server</div>
+      <div class="card fade-up">WhatsApp Group</div>
+      <div class="card fade-up">TikTok Channel</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Shoon Hub V3. All Rights Reserved.</p>
+    <p>Made with 💚 Cyber Energy</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑</button>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: #05070a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Scroll Progress Bar */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #00ff88;
+  z-index: 9999;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #05070a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.loader-box {
+  text-align: center;
+}
+
+.glow-ring {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #00ff88;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 0 20px #00ff88;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Canvas Background */
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 15, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #00ff88;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #00ff88;
+  box-shadow: 0 0 5px #00ff88;
+}
