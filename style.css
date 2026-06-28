@@ -1,11 +1,37 @@
 body{
-    background:#111;
+    background:#0d0d0d;
     color:white;
     font-family:Arial,sans-serif;
     text-align:center;
+    margin:50px 0;
 }
 
 h1{
     color:#00ff88;
-    margin-top:50px;
+    margin-bottom:30px;
+}
+
+.card{
+    width:300px;
+    margin:15px auto;
+    padding:18px;
+    background:#1b1b1b;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    background:#00ff88;
+    transform:scale(1.05);
+}
+
+.card a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+}
+
+p{
+    margin-top:30px;
 }
