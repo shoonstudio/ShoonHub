@@ -914,4 +914,26 @@ padding:12px;
 
 }
 
+}.links a{
+    position:relative;
+    overflow:hidden;
+}
+
+@keyframes ripple{
+
+0%{
+transform:translate(-50%,-50%) scale(0);
+opacity:1;
+}
+
+100%{
+transform:translate(-50%,-50%) scale(12);
+opacity:0;
+}
+
+}
+
+body{
+opacity:0;
+transition:1s;
 }
