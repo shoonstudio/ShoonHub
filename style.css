@@ -6,9 +6,11 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(-45deg,#0f0f0f,#1b1b1b,#003300,#001a00);
+   body{
+    background:linear-gradient(-45deg,#050505,#101010,#001a10,#050505);
     background-size:400% 400%;
-    animation:bg 12s ease infinite;
+    animation:bgMove 12s ease infinite;
+}
     color:white;
     display:flex;
     justify-content:center;
@@ -16,10 +18,10 @@ body{
     min-height:100vh;
 }
 
-@keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .container{
@@ -40,9 +42,13 @@ body{
 }
 
 h1{
+    font-size:42px;
     color:#00ff88;
-    text-shadow:0 0 15px #00ff88;
-    margin-bottom:10px;
+    text-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88,
+        0 0 40px #00ff88;
+}
 }
 
 .bio{
@@ -65,11 +71,8 @@ h1{
 }
 
 .card:hover{
-    transform:translateY(-5px) scale(1.03);
-    background:#00ff88;
-    color:black;
-    box-shadow:0 0 25px #00ff88;
-}
+   transform:translateY(-8px) scale(1.05);
+box-shadow:0 0 35px #00ff88;
 
 .footer{
     margin-top:30px;
