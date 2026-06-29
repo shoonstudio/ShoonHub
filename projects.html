@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
 
+<link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        👑 ShoonHub
+    </div>
+
+    <ul>
+        <li onclick="window.location.href='admin.html'">🏠 Dashboard</li>
+        <li onclick="window.location.href='profile.html'">👤 Profile</li>
+        <li onclick="window.location.href='analytics.html'">📊 Analytics</li>
+        <li class="active">📁 Projects</li>
+        <li onclick="window.location.href='settings.html'">⚙️ Settings</li>
+    </ul>
+
+    <button onclick="logout()">Logout</button>
+
+</div>
+
+<div class="main">
+
+    <h1>📁 Projects</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>ShoonHub V7</h2>
+            <p>Status : ✅ Completed</p>
+        </div>
+
+        <div class="card">
+            <h2>Portfolio Website</h2>
+            <p>Status : 🚧 In Progress</p>
+        </div>
+
+        <div class="card">
+            <h2>Admin Dashboard</h2>
+            <p>Status : 📅 Planned</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function logout(){
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
