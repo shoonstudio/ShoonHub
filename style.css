@@ -500,4 +500,88 @@ footer{
 
     }
 
+}/* ===========================
+   PARTICLES
+=========================== */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:#00ff88;
+
+    box-shadow:0 0 10px #00ff88;
+
+    animation:float linear infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   CURSOR GLOW
+=========================== */
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    background:#00ff88;
+
+    filter:blur(18px);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:999;
+
 }
