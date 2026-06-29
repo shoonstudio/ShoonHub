@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
 
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        👑 ShoonHub
+    </div>
+
+    <ul>
+        <li onclick="window.location.href='admin.html'">🏠 Dashboard</li>
+        <li class="active">👤 Profile</li>
+        <li onclick="window.location.href='analytics.html'">📊 Analytics</li>
+    </ul>
+
+    <button onclick="logout()">Logout</button>
+
+</div>
+
+<div class="main">
+
+    <h1>👤 My Profile</h1>
+
+    <div class="card">
+
+        <h2>Harshana Chamod</h2>
+
+        <p>Email :</p>
+        <h3>harshanaa66@gmail.com</h3>
+
+        <br>
+
+        <p>Role :</p>
+        <h3>Administrator</h3>
+
+    </div>
+
+</div>
+
+<script>
+function logout(){
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
