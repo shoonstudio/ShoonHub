@@ -84,4 +84,44 @@ document.querySelectorAll(".btn").forEach(btn => {
 
     });
 
+});/* ===========================
+   FLOATING PARTICLES
+=========================== */
+
+const particles = document.getElementById("particles");
+
+for (let i = 0; i < 60; i++) {
+
+    const dot = document.createElement("span");
+
+    dot.classList.add("particle");
+
+    dot.style.left = Math.random() * 100 + "%";
+
+    dot.style.top = Math.random() * 100 + "%";
+
+    dot.style.animationDelay = Math.random() * 5 + "s";
+
+    dot.style.animationDuration = (3 + Math.random() * 5) + "s";
+
+    particles.appendChild(dot);
+
+}
+
+/* ===========================
+   MOUSE GLOW
+=========================== */
+
+const glow = document.createElement("div");
+
+glow.className = "cursor-glow";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove", (e) => {
+
+    glow.style.left = e.clientX + "px";
+
+    glow.style.top = e.clientY + "px";
+
 });
